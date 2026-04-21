@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garden Lilith — Room 6</title>
+
+  <!-- 📱 Адаптация -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🎨 Стили -->
+  <link rel="stylesheet" href="styles.css?v=7">
+</head>
+
+<body>
+
+  <!-- =================================================
+  🌙 GARDEN LILITH — VIDEO ROOM
+  ================================================= -->
+
+  <div class="garden-scene">
+
+    <!-- 🎥 ВИДЕО-СЛОИ -->
+    <video id="videoA" class="scene-video active" autoplay muted playsinline preload="auto"></video>
+    <video id="videoB" class="scene-video" muted playsinline preload="auto"></video>
+
+    <!-- 🜏 SIGIL — ВЫХОД В ROOM4 -->
+    <a href="../room4/index.html" class="sigil-btn">
+      <img src="assets/img/sigil.png" alt="Return to Hall">
+    </a>
+
+    <!-- 🎵 КНОПКА МУЗЫКИ -->
+    <button id="musicToggle" class="music-btn">Music</button>
+
+   <!-- 🔊 МНОГОСЛОЙНЫЙ ЗВУК -->
+<audio id="layerSacral" loop preload="auto">
+  <source src="assets/audio/garden_layer_1.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="layerNight" loop preload="auto">
+  <source src="assets/audio/garden_layer_3.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="layerBell" preload="auto">
+  <source src="assets/audio/garden_layer_2.mp3" type="audio/mpeg">
+</audio>
+
+
+  </div>
+
+  <!-- ⚙️ JS -->
+  <script src="app.js?v=7"></script>
+
+</body>
+</html>

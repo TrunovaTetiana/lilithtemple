@@ -1,0 +1,64 @@
+<!-- room4/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lilith Temple — Hall</title>
+  <link rel="stylesheet" href="styles.css?v=105">
+</head>
+<body>
+
+<main class="scene-container">
+
+  <video
+    class="scene-video"
+    id="hallVideo"
+    autoplay
+    muted
+    loop
+    playsinline
+    webkit-playsinline
+    preload="auto"
+  >
+    <source src="assets/video/Hall_room4_v2.mp4" type="video/mp4">
+  </video>
+  
+<audio id="hallAudio" loop>
+  <source src="assets/audio/Luna_Arches.mp3" type="audio/mpeg">
+</audio>
+
+
+
+    <button class="video-start hidden" id="videoStartBtn" aria-label="Sound">
+  Шёпот
+</button>
+
+
+<a href="../room3/index.html" class="sigil-nav-hall" aria-label="Back to Room 3">
+  <img src="assets/img/sigil.png" alt="Lilith Sigil">
+</a>
+
+
+
+
+
+  <button class="hotspot hotspot-door-1" data-target="../room6/index.html" aria-label="Go to Room 6"></button>
+  <button class="hotspot hotspot-door-2" data-target="../room7/index.html" aria-label="Go to Room 7"></button>
+  <button class="hotspot hotspot-door-3" data-target="../room5/index.html" aria-label="Go to Room 5"></button>
+  <button class="hotspot hotspot-door-4" data-target="../room8/index.html" aria-label="Go to Room 8"></button>
+  <button class="hotspot hotspot-door-5" data-target="../room9/index.html" aria-label="Go to Room 9"></button>
+
+  <!-- MOBILE FALLBACK -->
+  <div class="mobile-panel">
+    <button class="mobile-btn" data-target="../room6/index.html">Room 6</button>
+    <button class="mobile-btn" data-target="../room7/index.html">Room 7</button>
+    <button class="mobile-btn" data-target="../room5/index.html">Room 5</button>
+    <button class="mobile-btn" data-target="../room8/index.html">Room 8</button>
+    <button class="mobile-btn" data-target="../room9/index.html">Room 9</button>
+  </div>
+
+</main>
+  <script src="app.js?v=105"></script>
+</body>
+</html>

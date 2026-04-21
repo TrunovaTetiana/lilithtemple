@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lilith Temple — Room 5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css?v=5">
+</head>
+<body>
+
+  <div class="scene-container">
+
+    <!-- VIDEO BACKGROUND -->
+    <video
+      class="scene-video"
+      id="roomVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    >
+      <source src="assets/video/room5_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- BUTTON: unlock room sound -->
+    <button id="soundBtn" class="sound-btn" type="button" aria-label="Enable room sound">
+      
+    </button>
+
+    <!-- BUTTON: music on/off -->
+    <button id="musicBtn" class="music-btn" type="button" aria-label="Toggle music">
+      Шёпот
+    </button>
+
+    <!-- DOOR SIGIL: transition to altar room -->
+    <button class="sigil-door" id="doorBtn" type="button" aria-label="Enter altar room">
+      <img src="assets/img/room5_sigil.png" alt="Door sigil">
+    </button>
+
+  </div>
+
+  <!-- Separate music track -->
+  <audio id="musicTrack" loop preload="auto">
+    <source src="assets/audio/room5_music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="app.js?v=5"></script>
+</body>
+</html>
+x

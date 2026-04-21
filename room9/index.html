@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oracle Builder</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- VIDEO BACKGROUND -->
+    <div class="video-bg">
+      <video id="oracleVideo" autoplay muted loop playsinline>
+        <source src="assets/video/oracle.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- DARK OVERLAY OVER VIDEO -->
+    <div class="overlay"></div>
+
+    <!-- DEBUG HOTSPOT ON THE BOOK -->
+    <button
+      id="oracleEnterBtn"
+      class="oracle-enter-btn"
+      type="button"
+      aria-label="Открыть Оракул">
+    </button>
+
+    <!-- HEADER OVER VIDEO -->
+    <header class="app-header">
+      <h1 data-ru="Оракул Храма Лилит" data-en="Lilith Temple Oracle">
+        Оракул Храма Лилит
+      </h1>
+
+      <p data-ru="Рабочая тестовая структура" data-en="Working test structure">
+        Рабочая тестовая структура
+      </p>
+
+      <div class="lang-switcher">
+        <button type="button" id="btn-ru">RU</button>
+        <button type="button" id="btn-en">EN</button>
+      </div>
+    </header>
+
+    <!-- ORACLE WINDOW -->
+    <main class="oracle-book">
+      <div class="oracle-topbar">
+        <button
+          class="back-btn"
+          type="button"
+          data-ru="Назад"
+          data-en="Back">
+          Назад
+        </button>
+
+        <div
+          class="oracle-path"
+          data-ru="Главная"
+          data-en="Home">
+          Главная
+        </div>
+      </div>
+
+      <div class="oracle-content">
+        <h2 data-ru="Главные разделы" data-en="Main Sections">
+          Главные разделы
+        </h2>
+
+        <ul class="main-sections">
+          <li>
+            <button
+              id="section-invocation"
+              data-ru="Призыв и славление богини Лилит"
+              data-en="Invocation and Praise of Goddess Lilith">
+              Призыв и славление богини Лилит
+            </button>
+          </li>
+
+          <li>
+            <button
+              id="section-rituals"
+              data-ru="Ритуалы и практики"
+              data-en="Rituals and Practices">
+              Ритуалы и практики
+            </button>
+          </li>
+
+          <li>
+            <button
+              id="section-altar"
+              data-ru="Алтарь"
+              data-en="Altar">
+              Алтарь
+            </button>
+          </li>
+
+          <li>
+            <button
+              id="section-correspondences"
+              data-ru="Соответствия"
+              data-en="Correspondences">
+              Соответствия
+            </button>
+          </li>
+
+          <li>
+            <button
+              id="section-state"
+              data-ru="Состояние"
+              data-en="State">
+              Состояние
+            </button>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- SOUND BUTTON -->
+    <button
+      id="soundToggle"
+      class="sound-btn"
+      type="button"
+      aria-label="Включить или выключить звук">
+      Sound
+    </button>
+
+    <!-- SIGIL RETURN TO ROOM 4 -->
+    <a
+      href="../room4/index.html"
+      class="sigil-home"
+      aria-label="Вернуться в room 4">
+      <img src="assets/img/sigil.png" alt="Sigil" />
+    </a>
+
+  </div>
+
+  <script src="./oracle-data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

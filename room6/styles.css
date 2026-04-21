@@ -1,0 +1,128 @@
+/* =================================================
+   Garden Lilith — room6 / styles.css
+   Базовый fullscreen CSS для video-based room
+   ================================================= */
+
+/* ---------- СБРОС ---------- */
+html,
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* чтобы браузер не добавлял лишнюю прокрутку */
+body{
+  position: relative;
+}
+
+/* ---------- ОСНОВНОЙ КОНТЕЙНЕР ---------- */
+.garden-scene{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+/* ---------- ВИДЕО-СЛОИ ---------- */
+.scene-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+  pointer-events: none;
+  background: #000;
+  z-index: 1;
+}
+
+.scene-video.active{
+  opacity: 1;
+  z-index: 2;
+}
+
+/* ---------- КНОПКА МУЗЫКИ ---------- */
+.music-btn{
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  z-index: 30;
+
+  padding: 10px 16px;
+  border: none;
+  border-radius: 999px;
+
+  background: rgba(20, 10, 8, 0.42);
+  color: rgba(255, 210, 150, 0.9);
+
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px rgba(255,170,90,0.12);
+  backdrop-filter: blur(2px);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.music-btn:hover{
+  background: rgba(35, 18, 14, 0.58);
+  color: rgba(255, 225, 170, 0.98);
+  box-shadow: 0 0 16px rgba(255,170,90,0.22);
+  transform: translateY(-1px);
+}
+
+/* ---------- SIGIL BUTTON ---------- */
+.sigil-btn{
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  z-index: 30;
+
+  width: 100px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.88;
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease,
+    filter 0.4s ease;
+
+  animation: sigilBreath 4s ease-in-out infinite;
+}
+
+.sigil-btn img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+@keyframes sigilBreath{
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+.sigil-btn:hover{
+  opacity: 1;
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 12px rgba(255,180,120,0.4));
+}

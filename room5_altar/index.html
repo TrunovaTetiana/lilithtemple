@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Lilith Temple — Room 5 Altar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+
+<div class="scene-container">
+
+  <!-- VIDEO BACKGROUND -->
+  <video
+    class="scene-video"
+    id="altarVideo"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source src="assets/video/room5_scene.mp4" type="video/mp4">
+  </video>
+
+  <!-- WHISPER BUTTON -->
+  <button id="musicBtn" class="music-btn" type="button">
+    Шёпот
+  </button>
+
+  <!-- RETURN SIGIL -->
+  <button class="sigil-nav" id="backBtn" type="button" aria-label="Вернуться">
+    <img src="assets/img/room5_sigil.png" alt="Return sigil">
+  </button>
+
+</div>
+
+<!-- SEPARATE MUSIC TRACK -->
+<audio id="musicTrack" loop preload="auto">
+  <source src="assets/audio/room5_ambient.mp3" type="audio/mpeg">
+</audio>
+
+<script src="app.js?v=4"></script>
+</body>
+</html>

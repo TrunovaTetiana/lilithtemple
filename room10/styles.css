@@ -1,0 +1,96 @@
+/* =========================================================
+   ROOM 10
+========================================================= */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: Arial, sans-serif;
+}
+
+/* Видео на весь экран */
+.bg-video{
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  background: #000;
+}
+
+/* Кнопка звука слева снизу */
+.sound-btn{
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 20;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.sound-btn:hover{
+  background: rgba(0,0,0,0.65);
+}
+
+/* Сигил справа снизу */
+.sigil-back{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 96px;
+  height: auto;
+  z-index: 20;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Планшеты */
+@media (max-width: 900px){
+  .sigil-back{
+    width: 82px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .sound-btn{
+    left: 16px;
+    bottom: 16px;
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 600px){
+  .sigil-back{
+    width: 72px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .sound-btn{
+    left: 14px;
+    bottom: 14px;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+}

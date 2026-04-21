@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Room 10</title>
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+
+  <!-- Фоновое видео -->
+  <video id="bgVideo" class="bg-video" playsinline preload="auto">
+    <source src="assets/video/SPS.mp4" type="video/mp4" />
+    Ваш браузер не поддерживает видео.
+  </video>
+
+  <!-- Кнопка звука -->
+  <button id="soundToggle" class="sound-btn" aria-label="Включить или выключить звук">
+    Sound: OFF
+  </button>
+
+  <!-- Сигил возврата -->
+  <img
+    src="assets/img/sigil.png"
+    alt="Back to map"
+    id="sigilBack"
+    class="sigil-back"
+  />
+
+  <script src="app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lilith Temple — Library</title>
+  <link rel="stylesheet" href="styles.css?v=20" />
+</head>
+<body>
+
+  <!-- ===================================== -->
+  <!-- LIBRARY SCENE CONTAINER -->
+  <!-- ===================================== -->
+  <main class="page-shell">
+
+    <div class="library-scene">
+
+      <!-- Фоновая картинка библиотеки -->
+      <img
+        src="assets/img/library_room.png?v=3"
+        class="library-bg"
+        alt="Library Room"
+      />
+
+      <!-- ===================================== -->
+      <!-- LANGUAGE SWITCH -->
+      <!-- ===================================== -->
+      <div class="lang-switch" aria-label="Language switcher">
+        <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <!-- ===================================== -->
+      <!-- ОСНОВНЫЕ КНИГИ НА СТОЛЕ -->
+      <!-- ===================================== -->
+      <button
+        class="book book-left"
+        data-book="history"
+        aria-label="Лилит: исторический атлас"
+      ></button>
+
+      <button
+        class="book book-center"
+        data-book="sigils"
+        aria-label="Лилит была, есть и будет…"
+      ></button>
+
+      <button
+        class="book book-right"
+        data-book="knowledge"
+        aria-label="Книга Храма"
+      ></button>
+
+      <!-- ===================================== -->
+      <!-- КОРЕШКИ НА ПОЛКАХ -->
+      <!-- ===================================== -->
+      <button
+        class="spine spine1"
+        data-book="spine1"
+        aria-label="Книга Лилит — Гурвич"
+      ></button>
+
+      <button
+        class="spine spine2"
+        data-book="spine2"
+        aria-label="Лилит в аналитической психологии"
+      ></button>
+
+      <button
+        class="spine spine3"
+        data-book="spine3"
+        aria-label="Лилит в каббале"
+      ></button>
+
+      <button
+        class="spine spine4"
+        data-book="spine4"
+        aria-label="Лилит и Другая Сторона"
+      ></button>
+
+    </div>
+
+    <!-- ===================================== -->
+    <!-- MOBILE LIBRARY PANEL -->
+    <!-- ===================================== -->
+    <div class="mobile-shelf">
+
+      <div class="mobile-group">
+        <h3
+          class="mobile-group-title"
+          data-title-ru="Основные книги"
+          data-title-en="Main Books"
+         >
+          Основные книги
+       </h3>
+
+        <button
+          class="mobile-shelf-btn"
+          data-book="history"
+          data-title-ru="Лилит: исторический атлас"
+          data-title-en="Lilith: A Historical Atlas"
+        >
+          Лилит: исторический атлас
+        </button>
+
+        <button
+          class="mobile-shelf-btn"
+          data-book="sigils"
+          data-title-ru="Лилит была, есть и будет…"
+          data-title-en="Lilith Was, Is, and Will Be…"
+        >
+          Лилит была, есть и будет…
+        </button>
+
+        <button
+          class="mobile-shelf-btn"
+          data-book="knowledge"
+          data-title-ru="Книга Храма"
+          data-title-en="The Book of the Temple"
+        >
+          Книга Храма
+        </button>
+      </div>
+
+      <div class="mobile-group">
+        <h3
+          class="mobile-group-title"
+          data-title-ru="Книги на полках"
+          data-title-en="Shelf Notes"
+         >
+          Книги на полках
+       </h3>
+
+        <button
+          class="mobile-shelf-btn"
+          data-book="spine1"
+          data-title-ru="Книга Лилит — Гурвич"
+          data-title-en="The Book of Lilith — Gurvich"
+        >
+          Книга Лилит — Гурвич
+        </button>
+
+        <button
+          class="mobile-shelf-btn"
+          data-book="spine2"
+          data-title-ru="Лилит в аналитической психологии"
+          data-title-en="Lilith in Analytical Psychology"
+        >
+          Лилит в аналитической психологии
+        </button>
+
+        <button
+          class="mobile-shelf-btn"
+          data-book="spine3"
+          data-title-ru="Лилит в каббале"
+          data-title-en="Lilith in Kabbalah"
+        >
+          Лилит в каббале
+        </button>
+
+        <button
+          class="mobile-shelf-btn"
+          data-book="spine4"
+          data-title-ru="Лилит и Другая Сторона"
+          data-title-en="Lilith and the Other Side"
+        >
+          Лилит и Другая Сторона
+        </button>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ===================================== -->
+  <!-- OVERLAY -->
+  <!-- ===================================== -->
+  <div class="overlay hidden" id="overlay"></div>
+
+  <!-- ===================================== -->
+  <!-- SCROLL WINDOW -->
+  <!-- ===================================== -->
+  <div class="scroll-window hidden" id="scrollWindow">
+
+    <button
+      class="close-btn"
+      id="closeBtn"
+      aria-label="Close scroll"
+      type="button"
+    >
+      ×
+    </button>
+
+    <h2 id="scrollTitle">Scroll Title</h2>
+
+    <div class="scroll-text" id="scrollText">
+      Scroll text...
+    </div>
+
+  </div>
+
+  <!-- ===================================== -->
+  <!-- SIGIL PORTAL -->
+  <!-- ===================================== -->
+  <div class="sigil-gate">
+    <a href="../room3/index.html" aria-label="Return to room 3">
+      <img
+        src="assets/img/Lilith_sigil.png"
+        id="sigilGate"
+        alt="Sigil of Lilith"
+      />
+    </a>
+  </div>
+
+  <!-- ===================================== -->
+  <!-- SCRIPTS -->
+  <!-- books-data.js MUST be before app.js -->
+  <!-- ===================================== -->
+  <script src="books-data.js?v=1"></script>
+  <script src="app.js?v=20"></script>
+
+</body>
+</html>

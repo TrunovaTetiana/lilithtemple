@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Room 8 — Art Space</title>
+
+  <!--
+    Cache busting:
+    если Safari / Mac не видит изменения,
+    просто меняй ?v=1 на ?v=2, ?v=3 и т.д.
+  -->
+  <link rel="stylesheet" href="styles.css?v=245" />
+</head>
+<body>
+
+  <!-- =========================================================
+       ROOM 8 — MAIN SCENE
+       Главная сцена комнаты:
+       - видео-фон
+       - 2 кликабельных зеркала
+       - сигил выхода в Room 4
+       - кнопка включения / выключения музыки
+  ========================================================== -->
+  <main class="scene-container">
+
+    <!-- =====================================================
+         BACKGROUND VIDEO
+         Основной MP4 фон комнаты
+         Видео в loop, autoplay, muted, playsinline
+    ====================================================== -->
+    <video
+      class="scene-video"
+      id="sceneVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    >
+      <source src="assets/video/art_scene_01.mp4" type="video/mp4" />
+      Ваш браузер не поддерживает видео.
+    </video>
+
+    <!-- =====================================================
+         ROOM MUSIC
+         Отдельная музыка комнаты
+         В app.js будем:
+         - запускать
+         - останавливать
+         - делать loop
+         - при желании регулировать громкость
+    ====================================================== -->
+    <audio id="roomMusic" loop preload="auto">
+      <source src="assets/audio/art_air.mp3" type="audio/mpeg" />
+      Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <!-- =====================================================
+         HOTSPOT 1 — MIRROR ONE
+         Первое зеркало
+         По клику открывает первый набор карточек:
+         tata1, tata2, tata3, tata4, warning
+    ====================================================== -->
+    <button
+      class="hotspot hotspot-mirror-1"
+      id="mirrorOneBtn"
+      type="button"
+      aria-label="Открыть первое зеркало"
+      data-gallery="mirror1"
+    ></button>
+
+    <!-- =====================================================
+         HOTSPOT 2 — MIRROR TWO
+         Второе зеркало
+         По клику открывает второй набор карточек:
+         vivian, sova, lana_lik, warning
+    ====================================================== -->
+    <button
+      class="hotspot hotspot-mirror-2"
+      id="mirrorTwoBtn"
+      type="button"
+      aria-label="Открыть второе зеркало"
+      data-gallery="mirror2"
+    ></button>
+
+    <!-- =====================================================
+         EXIT SIGIL → ROOM 4
+         Серебряный сигил для выхода из Room 8 в Room 4
+         Сейчас это button, переход сделаем через JS
+         чтобы было удобнее управлять логикой
+    ====================================================== -->
+    <button
+      class="sigil-nav sigil-exit"
+      id="exitSigil"
+      type="button"
+      aria-label="Вернуться в Hall Room 4"
+    >
+      <img src="assets/img/sigil22.png" alt="Exit Sigil" />
+    </button>
+
+    <!-- =====================================================
+         MUSIC TOGGLE BUTTON
+         Кнопка слева внизу:
+         включает / выключает музыку
+         Текст потом можно менять через JS:
+         Music On / Music Off
+    ====================================================== -->
+    <button
+      class="music-toggle"
+      id="musicToggleBtn"
+      type="button"
+      aria-label="Включить или выключить музыку"
+    >
+      Music
+    </button>
+
+    <!-- =====================================================
+         MOBILE FALLBACK PANEL
+         Для мобильных экранов, если hotspot'ы слишком мелкие
+         На desktop можно скрывать через CSS
+         На mobile — показывать
+    ====================================================== -->
+    <div class="mobile-panel" id="mobilePanel">
+
+      <button
+        class="mobile-btn"
+        type="button"
+        data-gallery="mirror1"
+      >
+        Mirror I
+      </button>
+
+      <button
+        class="mobile-btn"
+        type="button"
+        data-gallery="mirror2"
+      >
+        Mirror II
+      </button>
+
+      <button
+        class="mobile-btn mobile-exit-btn"
+        id="mobileExitBtn"
+        type="button"
+      >
+        Exit
+      </button>
+    </div>
+
+  </main>
+
+  <!-- =========================================================
+       CARD OVERLAY
+       Overlay для карточек:
+       - открывается поверх сцены
+       - показывает PNG карточку
+       - стрелки листают
+       - сигил закрывает
+  ========================================================== -->
+  <div class="overlay hidden" id="cardOverlay">
+
+    <!--
+      Это отдельное окно просмотра карточек
+      Внутри:
+      - карточка
+      - стрелка влево
+      - стрелка вправо
+      - сигил закрытия
+    -->
+    <div class="card-viewer" id="cardViewer">
+
+      <!-- ===================================================
+           CLOSE SIGIL
+           Золотой сигил / основной sigil.png
+           Закрывает overlay карточек
+      ==================================================== -->
+      <button
+        class="card-close"
+        id="cardCloseBtn"
+        type="button"
+        aria-label="Закрыть карточки"
+      >
+        <img src="assets/img/sigil.png" alt="Close Sigil" />
+      </button>
+
+      <!-- ===================================================
+           LEFT ARROW
+           Стрелка назад
+           Используем тот же PNG strelka.png
+           В CSS потом можно отзеркалить / повернуть
+      ==================================================== -->
+      <button
+        class="card-nav card-prev"
+        id="cardPrevBtn"
+        type="button"
+        aria-label="Предыдущая карточка"
+      >
+        <img src="assets/img/strelka.png" alt="Previous" />
+      </button>
+
+      <!-- ===================================================
+           CURRENT CARD IMAGE
+           Здесь JS будет подставлять нужную PNG карточку
+           Например:
+           tata1.png
+           tata2.png
+           vivian.png
+           warning.png
+      ==================================================== -->
+      <div class="card-frame">
+        <img
+          class="card-image"
+          id="cardImage"
+          src="assets/img/tata1.png"
+          alt="Card"
+        />
+      </div>
+
+      <!-- ===================================================
+           RIGHT ARROW
+           Стрелка вперёд
+      ==================================================== -->
+      <button
+        class="card-nav card-next"
+        id="cardNextBtn"
+        type="button"
+        aria-label="Следующая карточка"
+      >
+        <img src="assets/img/strelka.png" alt="Next" />
+      </button>
+
+    </div>
+  </div>
+
+  <!-- =========================================================
+       ROOM 8 SCRIPT
+       В app.js будет:
+       - массив карточек зеркала 1
+       - массив карточек зеркала 2
+       - openGallery(...)
+       - next / prev
+       - close overlay
+       - music toggle
+       - exit to Room 4
+  ========================================================== -->
+  <script src="app.js?v=245"></script>
+</body>
+</html>

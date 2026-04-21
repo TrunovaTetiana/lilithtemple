@@ -1,0 +1,747 @@
+/* room4/styles.css */
+
+/* =========================================================
+   ROOM 4 — HALL
+========================================================= */
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body{
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: Georgia, serif;
+}
+
+body{
+  color: #f3e7cf;
+}
+
+/* =========================================================
+   SCENE CONTAINER
+========================================================= */
+
+.scene-container{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* =========================================================
+   VIDEO SCENE
+========================================================= */
+
+.scene-video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* =========================================================
+   HOTSPOT BASE
+========================================================= */
+
+.hotspot{
+  position: absolute;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
+.hotspot:hover{
+  box-shadow: none;
+}
+
+.hotspot:focus,
+.hotspot:active,
+.hotspot:focus-visible{
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+
+
+/* =========================================================
+   HOTSPOTS — BASE
+========================================================= */
+
+.hotspot-door-1{
+  left: 25%;
+  top: 70%;
+  width: 7%;
+  height: 20%;
+}
+
+.hotspot-door-2{
+  left: 37%;
+  top: 70%;
+  width: 7%;
+  height: 20%;
+}
+
+.hotspot-door-3{
+  left: 50%;
+  top: 69%;
+  width: 7%;
+  height: 20%;
+}
+
+.hotspot-door-4{
+  left: 63%;
+  top: 69%;
+  width: 7%;
+  height: 20%;
+}
+
+.hotspot-door-5{
+  left: 75%;
+  top: 70%;
+  width: 7%;
+  height: 20%;
+}
+
+/* =========================================================
+   SOUND BUTTON
+========================================================= */
+
+.video-start{
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 30;
+
+  background: transparent;
+  border: none;
+
+  color: #d8d3c5;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+
+  opacity: 0.85;
+  transition:
+    opacity 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.video-start:hover{
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+.video-start:active{
+  transform: scale(0.95);
+  opacity: 0.7;
+}
+
+.hidden{
+  display: none !important;
+}
+
+/* =========================================================
+   HALL SIGIL — BASE
+========================================================= */
+
+.sigil-nav-hall{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 25;
+  display: block;
+}
+
+.sigil-nav-hall img{
+  display: block;
+  width: 44px;
+  height: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 10px rgba(170, 200, 230, 0.25));
+  animation: sigilBreath 3.4s ease-in-out infinite;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    filter 0.25s ease;
+}
+
+.sigil-nav-hall:hover img{
+  transform: scale(1.05);
+  opacity: 1;
+  filter: drop-shadow(0 0 14px rgba(210, 230, 255, 0.38));
+}
+
+.sigil-nav-hall:active img{
+  transform: scale(0.97);
+}
+
+/* =========================================================
+   MOBILE PANEL
+========================================================= */
+
+.mobile-panel{
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 15;
+
+  width: min(92vw, 520px);
+  padding: 10px;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+
+  background: rgba(0,0,0,0.08);
+  backdrop-filter: blur(3px);
+}
+
+.mobile-btn{
+  width: 100%;
+  display: block;
+  margin: 6px 0;
+  padding: 12px 14px;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 12px;
+  background: transparent;
+  backdrop-filter: none;
+
+  color: #f3e7cf;
+  font-size: 15px;
+  text-align: center;
+
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mobile-btn:hover{
+  border-color: rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.03);
+}
+
+.mobile-btn:active{
+  transform: scale(0.98);
+  background: rgba(255,255,255,0.06);
+}
+
+/* =========================================================
+   1401px AND ABOVE
+   Большой Odyssey / широкий экран
+========================================================= */
+
+@media screen and (min-width: 1401px){
+
+  .scene-video{
+    object-position: center 40%;
+  }
+
+  .hotspot-door-1{
+    left: 26%;
+    top: 76%;
+    width: 7%;
+    height: 25%;
+  }
+
+  .hotspot-door-2{
+    left: 37%;
+    top: 76%;
+    width: 7%;
+    height: 25%;
+  }
+
+  .hotspot-door-3{
+    left: 50%;
+    top: 78%;
+    width: 7%;
+    height: 25%;
+  }
+
+  .hotspot-door-4{
+    left: 62%;
+    top: 78%;
+    width: 7%;
+    height: 25%;
+  }
+
+  .hotspot-door-5{
+    left: 74%;
+    top: 76%;
+    width: 7%;
+    height: 25%;
+  }
+
+  .sigil-nav-hall{
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 70px;
+  }
+}
+
+/* =========================================================
+   1201px – 1400px
+   Dell / half-screen / problem range
+   Пока те же координаты, чтобы ты могла отдельно подгонять
+========================================================= */
+
+@media screen and (min-width: 1201px) and (max-width: 1400px){
+
+  .scene-video{
+    object-position: center 40%;
+  }
+
+  .hotspot-door-1{
+    left: 18%;
+    top: 66%;
+    width: 10%;
+    height: 22%;
+  }
+
+  .hotspot-door-2{
+    left: 33%;
+    top: 66%;
+    width: 10%;
+    height: 22%;
+  }
+
+  .hotspot-door-3{
+    left: 50%;
+    top: 66%;
+    width: 10%;
+    height: 22%;
+  }
+
+  .hotspot-door-4{
+    left: 66%;
+    top: 66%;
+    width: 10%;
+    height: 22%;
+  }
+
+  .hotspot-door-5{
+    left: 82%;
+    top: 66%;
+    width: 10%;
+    height: 22%;
+  }
+
+  .sigil-nav-hall{
+    left: 50%;
+    bottom: 45px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 80px;
+  }
+}
+
+/* =========================================================
+   1000px – 1200px
+========================================================= */
+
+@media screen and (min-width: 1000px) and (max-width: 1200px){
+
+  .scene-video{
+    object-position: center 30%;
+  }
+
+  .hotspot-door-1{
+    left: 25%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-2{
+    left: 36%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-3{
+    left: 50%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-4{
+    left: 63%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-5{
+    left: 75%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .sigil-nav-hall{
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 40px;
+  }
+}
+
+/* =========================================================
+   901px – 999px
+========================================================= */
+
+@media screen and (min-width: 901px) and (max-width: 999px){
+
+  .scene-video{
+    object-position: center 30%;
+  }
+
+  .hotspot-door-1{
+    left: 25%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-2{
+    left: 36%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-3{
+    left: 50%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-4{
+    left: 63%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .hotspot-door-5{
+    left: 75%;
+    top: 72%;
+    width: 9%;
+    height: 24%;
+  }
+
+  .sigil-nav-hall{
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 40px;
+  }
+}
+
+/* =========================================================
+   821px – 900px
+========================================================= */
+
+@media screen and (min-width: 821px) and (max-width: 900px){
+
+  .scene-video{
+    object-position: center 22%;
+  }
+
+  .hotspot-door-1{
+    left: 14%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-2{
+    left: 30%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-3{
+    left: 50%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-4{
+    left: 70%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-5{
+    left: 85%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .sigil-nav-hall{
+    left: 50%;
+    bottom: 57px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 70px;
+  }
+}
+
+/* =========================================================
+   601px – 820px
+========================================================= */
+
+@media screen and (min-width: 601px) and (max-width: 820px){
+
+  .scene-video{
+    object-position: center 22%;
+  }
+
+  .hotspot-door-1{
+    left: 14%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-2{
+    left: 30%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-3{
+    left: 50%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-4{
+    left: 70%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .hotspot-door-5{
+    left: 85%;
+    top: 64%;
+    width: 12%;
+    height: 20%;
+  }
+
+  .sigil-nav-hall{
+    left: 50%;
+    bottom: 57px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 56px;
+  }
+}
+
+/* =========================================================
+   MOBILE 600px AND BELOW
+========================================================= */
+
+@media screen and (max-width: 600px){
+
+  .scene-video{
+    object-position: center 24%;
+  }
+
+  .hotspot{
+    display: none;
+  }
+
+  .mobile-panel{
+    display: block;
+  }
+
+  .mobile-btn{
+    font-size: 14px;
+    padding: 11px 12px;
+  }
+
+  .sigil-nav-hall{
+    left: 87%;
+    bottom: 89px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 45px;
+  }
+
+  .video-start{
+    left: 14px;
+    bottom: 8px;
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   VERY NARROW PHONES
+========================================================= */
+
+@media screen and (max-width: 420px){
+
+  .sigil-nav-hall{
+    left: 87%;
+    bottom: 12%;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 50px;
+  }
+
+  .video-start{
+    left: 6%;
+    bottom: 5%;
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+/* =========================================================
+   PROBLEM SCREEN
+   1280x800 / wide but short
+   вставить после всех media, перед @keyframes sigilBreath
+========================================================= */
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) and (max-height: 900px){
+
+  .scene-video{
+    object-position: center 34%;
+  }
+
+  .hotspot-door-1{
+    left: 26%;
+    top: 75%;
+    width: 8%;
+    height: 35%;
+  }
+
+  .hotspot-door-2{
+    left: 37%;
+    top: 75%;
+    width: 8%;
+    height: 35%;
+  }
+
+  .hotspot-door-3{
+    left: 50%;
+    top: 73%;
+    width: 8%;
+    height: 33%;
+  }
+
+  .hotspot-door-4{
+    left: 62%;
+    top: 75%;
+    width: 8%;
+    height: 35%;
+  }
+
+  .hotspot-door-5{
+    left: 74%;
+    top: 75%;
+    width: 8%;
+    height: 35%;
+  }
+
+  .sigil-nav-hall{
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+  }
+
+  .sigil-nav-hall img{
+    width: 40px;
+    height: auto;
+  }
+
+  .video-start{
+    left: 2%;
+    bottom: 3%;
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   SIGIL BREATH
+========================================================= */
+
+@keyframes sigilBreath{
+  0%{
+    transform: scale(1);
+    opacity: 0.92;
+  }
+  50%{
+    transform: scale(1.04);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 0.92;
+  }
+}
