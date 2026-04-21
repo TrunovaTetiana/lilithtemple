@@ -53,6 +53,7 @@ const cardCloseBtn = document.getElementById("cardCloseBtn");
 
 const galleries = {
   mirror1: [
+    "assets/img/serrano_ikona.png",
     "assets/img/tata1.png",
     "assets/img/tata2.png",
     "assets/img/tata3.png",

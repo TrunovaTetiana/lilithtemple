@@ -334,9 +334,9 @@ DEBUG END */
 
 .card-nav img{
   display: block;
-  width: 90px;
+  width: 60px;
   height: auto;
-  opacity: 0.85;
+  opacity: 1;
 }
 
 .card-prev img{
