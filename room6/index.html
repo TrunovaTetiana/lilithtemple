@@ -2,53 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Garden Lilith — Room 6</title>
+  <title>Garden of Lilith</title>
 
-  <!-- 📱 Адаптация -->
+  <!-- 📱 Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 🎨 Стили -->
-  <link rel="stylesheet" href="styles.css?v=7">
+  <!-- 🎨 Styles -->
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 
 <body>
 
   <!-- =================================================
-  🌙 GARDEN LILITH — VIDEO ROOM
+  🌙 GARDEN LILITH — ROOM 6
+  4 optimized videos + fade transition + layered music
   ================================================= -->
 
   <div class="garden-scene">
 
-    <!-- 🎥 ВИДЕО-СЛОИ -->
+    <!-- 🎥 VIDEO LAYERS FOR FADE -->
     <video id="videoA" class="scene-video active" autoplay muted playsinline preload="auto"></video>
     <video id="videoB" class="scene-video" muted playsinline preload="auto"></video>
 
-    <!-- 🜏 SIGIL — ВЫХОД В ROOM4 -->
+    <!-- 🜏 SIGIL — RETURN TO ROOM 4 -->
     <a href="../room4/index.html" class="sigil-btn">
-      <img src="assets/img/sigil.png" alt="Return to Hall">
+      <img src="assets/img/sigil.webp" alt="Return to Hall">
     </a>
 
-    <!-- 🎵 КНОПКА МУЗЫКИ -->
+    <!-- 🎵 MUSIC BUTTON -->
     <button id="musicToggle" class="music-btn">Music</button>
 
-   <!-- 🔊 МНОГОСЛОЙНЫЙ ЗВУК -->
-<audio id="layerSacral" loop preload="auto">
-  <source src="assets/audio/garden_layer_1.mp3" type="audio/mpeg">
-</audio>
+    <!-- 🔊 MULTI-LAYER MUSIC -->
+    <audio id="layerSacral" loop preload="auto">
+      <source src="assets/audio/garden_layer_1.mp3" type="audio/mpeg">
+    </audio>
 
-<audio id="layerNight" loop preload="auto">
-  <source src="assets/audio/garden_layer_3.mp3" type="audio/mpeg">
-</audio>
+    <audio id="layerNight" loop preload="auto">
+      <source src="assets/audio/garden_layer_3.mp3" type="audio/mpeg">
+    </audio>
 
-<audio id="layerBell" preload="auto">
-  <source src="assets/audio/garden_layer_2.mp3" type="audio/mpeg">
-</audio>
-
+    <audio id="layerBell" preload="auto">
+      <source src="assets/audio/garden_layer_2.mp3" type="audio/mpeg">
+    </audio>
 
   </div>
 
-  <!-- ⚙️ JS -->
-  <script src="app.js?v=7"></script>
+  <!-- ⚙ JavaScript -->
+  <script src="app.js?v=12"></script>
 
 </body>
 </html>

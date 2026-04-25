@@ -1,46 +1,24 @@
 /* =================================================
    Garden Lilith — room6 / app.js
-   Простая и надёжная версия
+   Clean fade version: 4 videos + layered music
    ================================================= */
+
+/* ---------- VIDEO PLAYLIST ---------- */
 
 const playlist = [
   "assets/video/01_calm_garden.mp4",
+  "assets/video/02_mist.mp4",
+  "assets/video/03_fire.mp4",
+  "assets/video/02_mist.mp4",
   "assets/video/01_calm_garden.mp4",
-
-  "assets/video/03_light_mist.mp4",
-  "assets/video/04_strong_mist.mp4",
-
-  "assets/video/01_calm_garden.mp4",
-
-  "assets/video/05_arch.mp4",
-
-  "assets/video/01_calm_garden.mp4",
-
-  "assets/video/06_fire.mp4",
-
-  "assets/video/01_calm_garden.mp4",
-
-  "assets/video/07_snake.mp4",
-
-  "assets/video/01_calm_garden.mp4",
-
-  "assets/video/08_lilith_intro.mp4",
-  "assets/video/09_lilith_reveal.mp4",
-  "assets/video/10_lilith_presence.mp4",
-
-  "assets/video/01_calm_garden.mp4"
+  "assets/video/04_lilith_presence.mp4"
 ];
 
-const PLAYBACK_RATE = 0.90;
+const PLAYBACK_RATE = 1.0;
 const DEBUG = true;
 
 const videoA = document.getElementById("videoA");
 const videoB = document.getElementById("videoB");
-
-const layerSacral = document.getElementById("layerSacral");
-const layerNight  = document.getElementById("layerNight");
-const layerBell   = document.getElementById("layerBell");
-const musicToggle = document.getElementById("musicToggle");
 
 let currentIndex = 0;
 let activeVideo = videoA;
@@ -52,6 +30,8 @@ function log(...args){
 }
 
 function setupVideo(video){
+  if (!video) return;
+
   video.muted = true;
   video.playsInline = true;
   video.preload = "auto";
@@ -59,6 +39,8 @@ function setupVideo(video){
 }
 
 function clearVideo(video){
+  if (!video) return;
+
   video.pause();
   video.onended = null;
   video.onloadeddata = null;
@@ -85,7 +67,7 @@ function loadVideo(video, src){
     };
 
     video.onerror = () => {
-      reject(new Error("Не удалось загрузить видео: " + src));
+      reject(new Error("Could not load video: " + src));
     };
 
     video.load();
@@ -101,7 +83,7 @@ async function startInitialScene(){
     activeVideo.classList.add("active");
     attachEndedHandler();
   } catch (err) {
-    console.error("Ошибка старта первой сцены:", err);
+    console.error("[Garden Lilith] First scene error:", err);
   }
 }
 
@@ -132,7 +114,7 @@ function attachEndedHandler(){
       log("Now playing:", playlist[currentIndex]);
 
     } catch (err) {
-      console.error("Ошибка переключения сцены:", err);
+      console.error("[Garden Lilith] Switch scene error:", err);
     } finally {
       isSwitching = false;
     }
@@ -141,27 +123,33 @@ function attachEndedHandler(){
 
 
 /* ---------- MULTI-LAYER MUSIC ---------- */
+
+const layerSacral = document.getElementById("layerSacral");
+const layerNight  = document.getElementById("layerNight");
+const layerBell   = document.getElementById("layerBell");
+const musicToggle = document.getElementById("musicToggle");
+
 let musicStarted = false;
 let bellTimer = null;
 
 function randomBellDelay() {
-  // колокольчик будет появляться примерно раз в 18–34 секунды
+  // колокольчик появляется примерно раз в 18–34 секунды
   return Math.floor(Math.random() * (34000 - 18000 + 1)) + 18000;
 }
 
 function scheduleBell() {
-  if (!musicStarted) return;
+  if (!musicStarted || !layerBell) return;
 
   clearTimeout(bellTimer);
 
   bellTimer = setTimeout(async () => {
-    if (!musicStarted) return;
+    if (!musicStarted || !layerBell) return;
 
     try {
       layerBell.currentTime = 0;
       await layerBell.play();
     } catch (err) {
-      console.error("Bell play error:", err);
+      console.error("[Garden Lilith] Bell play error:", err);
     }
 
     scheduleBell();
@@ -169,13 +157,13 @@ function scheduleBell() {
 }
 
 async function startGardenMusic() {
-  try {
-    /* громкости */
-    layerSacral.volume = 0.10;  // сакральный слой
-    layerNight.volume  = 0.40;  // ночной слой
-    layerBell.volume   = 0.15;  // редкий акцент
+  if (!layerSacral || !layerNight || !layerBell || !musicToggle) return;
 
-    /* старт двух постоянных слоёв */
+  try {
+    layerSacral.volume = 0.10;
+    layerNight.volume  = 0.40;
+    layerBell.volume   = 0.15;
+
     await layerSacral.play();
     await layerNight.play();
 
@@ -185,13 +173,14 @@ async function startGardenMusic() {
     scheduleBell();
 
   } catch (err) {
-    console.error("Не удалось запустить многослойный звук:", err);
+    console.error("[Garden Lilith] Music start error:", err);
   }
 }
 
 function stopGardenMusic() {
-  musicStarted = false;
+  if (!layerSacral || !layerNight || !layerBell || !musicToggle) return;
 
+  musicStarted = false;
   clearTimeout(bellTimer);
 
   layerSacral.pause();
@@ -217,6 +206,7 @@ if (musicToggle) {
 
 
 /* ---------- START ---------- */
+
 setupVideo(videoA);
 setupVideo(videoB);
 startInitialScene();

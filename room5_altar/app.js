@@ -4,7 +4,7 @@ const musicBtn = document.getElementById("musicBtn");
 const backBtn = document.getElementById("backBtn");
 
 /* Базовые уровни громкости */
-const VIDEO_BASE_VOLUME = 1.0;   // обычный треск огня
+const VIDEO_BASE_VOLUME = 0.6;   // обычный треск огня
 const VIDEO_LOW_VOLUME  = 0.08;   // когда включён Шёпот
 const MUSIC_VOLUME      = 0.20;   // отдельный mp3
 

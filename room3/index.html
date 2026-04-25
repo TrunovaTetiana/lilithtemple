@@ -3,47 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Room 3 – Map</title>
+  <title>Atlas of Worlds</title>
 
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 
 <body>
 
-  <!-- 🎥 VIDEO BACKGROUND -->
-  <video id="bgVideo" autoplay muted loop playsinline class="bg-video">
-    <source src="assets/video/room3_map_loop.mp4" type="video/mp4">
-  </video>
-
-  <!-- 🔘 FALLBACK BUTTON (если autoplay не сработает) -->
-  <button id="videoStartBtn" class="video-btn">Enter</button>
-
-  <!-- 🎧 SOUND -->
-  <audio id="bgSound" loop>
-    <source src="assets/audio/room3_ambient.mp3" type="audio/mpeg">
-  </audio>
-
-  <button id="soundBtn" class="sound-btn">Sound</button>
+  <img class="scene-image" src="assets/img/portal.webp" alt="Portal Scene">
 
   <!-- 🜏 SIGIL (назад) -->
-  <img src="assets/img/sigil.png" class="sigil" id="sigilBtn"/>
+  <img src="assets/img/sigil.webp" class="sigil" id="sigilBtn"/>
 
   <!-- 🔥 HOTSPOTS (порталы) -->
-  <div class="hotspot hotspot-left" data-target="../room3-in/index.html"></div>
+  <div class="hotspot hotspot-left" data-target="../room4/index.html"></div>
   <div class="hotspot hotspot-center" data-target="../room10/index.html"></div>
   <div class="hotspot hotspot-right" data-target="../room20/index.html"></div>
 
 
   <div class="mobile-nav">
-  <button class="mobile-nav-btn" data-target="../room2/index.html">Библиотека</button>
-  <button class="mobile-nav-btn" data-target="../room4/index.html">Храм Лилит</button>
-  <button class="mobile-nav-btn" data-target="../room10/index.html">Мир 2</button>
-  <button class="mobile-nav-btn" data-target="../room20/index.html">Мир 3</button>
+  <button class="mobile-nav-btn" data-target="../room2/index.html">Library of Shadows</button>
+  <button class="mobile-nav-btn" data-target="../room4/index.html">Hall of Portals</button>
+  <button class="mobile-nav-btn" data-target="../room10/index.html">Astral Realm</button>
+  <button class="mobile-nav-btn" data-target="../room20/index.html">Veiled Realm</button>
 </div>
 
 
 
 
-  <script src="app.js?v=4"></script>
+  <script src="app.js?v=8"></script>
 </body>
 </html>

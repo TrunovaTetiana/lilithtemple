@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lilith Temple — Room 7</title>
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <title>Temple of Sound</title>
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
 
@@ -24,27 +24,18 @@
     <!-- DARK OVERLAY -->
     <div class="scene-overlay"></div>
 
-    <!-- TEMPORARY OPEN BUTTONS
-         Потом заменим их на invisible hotspots на стене -->
-    
-
-
-      <!-- DEBUG HOTSPOTS ON WALL -->
-
-       <button class="artist-hotspot hotspot-less-doll" data-card="less-doll" type="button" aria-label="Open Less Doll card"></button>
-       <button class="artist-hotspot hotspot-nina" data-card="nina" type="button" aria-label="Open Nina card"></button>
-       <button class="artist-hotspot hotspot-serrano" data-card="serrano" type="button" aria-label="Open Serrano card"></button>
-
+    <!-- ARTIST HOTSPOTS -->
+    <button class="artist-hotspot hotspot-less-doll" data-card="less-doll" type="button" aria-label="Open Less Doll card"></button>
+    <button class="artist-hotspot hotspot-nina" data-card="nina" type="button" aria-label="Open Nina card"></button>
 
     <!-- ROOM SOUND BUTTON -->
-    <button id="roomSoundBtn" class="room-sound-btn" type="button">Room Sound: OFF</button>
+    <button id="roomSoundBtn" class="room-sound-btn" type="button">Sound:OFF</button>
 
     <!-- SIGIL -->
     <a href="../room4/index.html" class="sigil-link" aria-label="Back to Room 4">
-      <img src="assets/img/sigil.png" alt="Sigil" class="sigil-img" />
+      <img src="assets/img/sigil.webp" alt="Sigil" class="sigil-img" />
     </a>
   </div>
-
 
   <!-- =========================================================
        CARD OVERLAY
@@ -53,7 +44,7 @@
     <div id="cardBackdrop" class="card-backdrop"></div>
 
     <div class="card-stage">
-      <!-- left / right arrows for future card switching if needed -->
+
       <button id="prevCardBtn" class="side-arrow side-arrow-left" type="button" aria-label="Previous card">
         ‹
       </button>
@@ -67,81 +58,35 @@
         <!-- LESS DOLL CARD -->
         <div id="card-less-doll" class="music-card hidden-card">
           <img
-            src="assets/img/card-less-doll.png"
+            src="assets/img/Less-Dol.webp"
             alt="Less Doll Card"
             class="card-image"
           />
 
           <div class="track-layer track-layer-less-doll">
-            <button class="track-btn track-less-1" type="button" data-track="assets/audio/lessdol_doroga.mp3" data-group="less-doll" aria-label="Less Doll track 1"></button>
-            <button class="track-btn track-less-2" type="button" data-track="assets/audio/lessdol_letat.mp3" data-group="less-doll" aria-label="Less Doll track 2"></button>
-            <button class="track-btn track-less-3" type="button" data-track="assets/audio/lessdol_lilit.mp3" data-group="less-doll" aria-label="Less Doll track 3"></button>
-            <button class="track-btn track-less-4" type="button" data-track="assets/audio/lessdol_vzyvayu_k_bogine.mp3" data-group="less-doll" aria-label="Less Doll track 4"></button>
-            <button class="track-btn track-less-5" type="button" data-track="assets/audio/lessdol_yaya.mp3" data-group="less-doll" aria-label="Less Doll track 5"></button>
-            <button class="track-btn track-less-6" type="button" data-track="assets/audio/lessdol_za_spinoy.mp3" data-group="less-doll" aria-label="Less Doll track 6"></button>
+            <button class="track-btn track-less-1" type="button" data-track="assets/audio/lessdol_doroga.mp3" data-group="less-doll"></button>
+            <button class="track-btn track-less-2" type="button" data-track="assets/audio/lessdol_letat.mp3" data-group="less-doll"></button>
+            <button class="track-btn track-less-3" type="button" data-track="assets/audio/lessdol_lilit.mp3" data-group="less-doll"></button>
+            <button class="track-btn track-less-4" type="button" data-track="assets/audio/lessdol_vzyvayu_k_bogine.mp3" data-group="less-doll"></button>
+            <button class="track-btn track-less-5" type="button" data-track="assets/audio/lessdol_yaya.mp3" data-group="less-doll"></button>
+            <button class="track-btn track-less-6" type="button" data-track="assets/audio/lessdol_za_spinoy.mp3" data-group="less-doll"></button>
           </div>
         </div>
 
         <!-- NINA CARD -->
         <div id="card-nina" class="music-card hidden-card">
           <img
-            src="assets/img/card-nina.png"
+            src="assets/img/Nina_Chirkova.webp"
             alt="Nina Card"
             class="card-image"
           />
 
           <div class="track-layer track-layer-nina">
-            <button class="track-btn track-nina-1" type="button" data-track="assets/audio/nina_ave_lilith.mp3" data-group="nina" aria-label="Nina track 1"></button>
-            <button class="track-btn track-nina-2" type="button" data-track="assets/audio/nina_lilit.mp3" data-group="nina" aria-label="Nina track 2"></button>
-            <button class="track-btn track-nina-3" type="button" data-track="assets/audio/nina_molitva_lilit.mp3" data-group="nina" aria-label="Nina track 3"></button>
-            <button class="track-btn track-nina-4" type="button" data-track="assets/audio/nina_temnaya_mat_lilit.mp3" data-group="nina" aria-label="Nina track 4"></button>
-            <button class="track-btn track-nina-5" type="button" data-track="assets/audio/nina_ja_pervaja.mp3" data-group="nina" aria-label="Nina track 5"></button>
-          </div>
-        </div>
-
-         <!-- NINA VOC CARD -->
-        <div id="card-nina-voc" class="music-card hidden-card">
-        <img
-            src="assets/img/nina_voc.png"
-            alt="Nina Voc Card"
-            class="card-image"
-         />
-
-         <div class="track-layer track-layer-nina-voc">
-
-        <!-- 1. Invocation -->
-        <button
-            class="track-btn track-nina-voc-1"
-            type="button"
-            data-track="assets/audio/nina_invoc.mp3"
-            data-group="nina-voc"
-            aria-label="Nina Invocation">
-        </button>
-
-        <!-- 2. Night Opens Circle -->
-        <button
-             class="track-btn track-nina-voc-2"
-             type="button"
-             data-track="assets/audio/nina_night.mp3"
-             data-group="nina-voc"
-             aria-label="Nina Night Opens Circle">
-         </button>
-
-        </div>
-    </div>
-
-        <!-- SERRANO CARD -->
-        <div id="card-serrano" class="music-card hidden-card">
-          <img
-            src="assets/img/card-serrano.png"
-            alt="Serrano Card"
-            class="card-image"
-          />
-
-          <div class="track-layer track-layer-serrano">
-            <button class="track-btn track-serrano-1" type="button" data-track="assets/audio/serrano_o_magna_mater_tenebrosa_o_lilit.mp3" data-group="serrano" aria-label="Serrano track 1"></button>
-            <button class="track-btn track-serrano-2" type="button" data-track="assets/audio/serrano_o_lilit_potentia_tenebris_et_luminis.mp3" data-group="serrano" aria-label="Serrano track 2"></button>
-            <button class="track-btn track-serrano-3" type="button" data-track="assets/audio/serrano_enn_prizyv_klipoticheskiy_11_raz_ks.mp3" data-group="serrano" aria-label="Serrano track 3"></button>
+            <button class="track-btn track-nina-1" type="button" data-track="assets/audio/nina_ave_lilith.mp3" data-group="nina"></button>
+            <button class="track-btn track-nina-2" type="button" data-track="assets/audio/nina_lilit.mp3" data-group="nina"></button>
+            <button class="track-btn track-nina-3" type="button" data-track="assets/audio/nina_molitva_lilit.mp3" data-group="nina"></button>
+            <button class="track-btn track-nina-4" type="button" data-track="assets/audio/nina_temnaya_mat_lilit.mp3" data-group="nina"></button>
+            <button class="track-btn track-nina-5" type="button" data-track="assets/audio/nina_ja_pervaja.mp3" data-group="nina"></button>
           </div>
         </div>
 
@@ -150,12 +95,13 @@
       <button id="nextCardBtn" class="side-arrow side-arrow-right" type="button" aria-label="Next card">
         ›
       </button>
+
     </div>
   </div>
 
-  <!-- SINGLE MUSIC PLAYER -->
-  <audio id="musicPlayer" preload="auto"></audio>
+  <!-- SINGLE MUSIC PLAYER (LAZY LOAD) -->
+  <audio id="musicPlayer" preload="none"></audio>
 
-  <script src="app.js?v=10"></script>
+  <script src="app.js?v=16"></script>
 </body>
 </html>

@@ -53,22 +53,22 @@ const cardCloseBtn = document.getElementById("cardCloseBtn");
 
 const galleries = {
   mirror1: [
-    "assets/img/serrano_ikona.png",
-    "assets/img/tata1.png",
-    "assets/img/tata2.png",
-    "assets/img/tata3.png",
-    "assets/img/tata4.png",
-    "assets/img/warning.png"
+    "assets/img/serrano_ikona.webp",
+    "assets/img/tata1.webp",
+    "assets/img/tata2.webp",
+    "assets/img/tata3.webp",
+    "assets/img/tata4.webp",
+    "assets/img/warning.webp"
   ],
 
    mirror2: [
-    "assets/img/vivian.png",
-    "assets/img/sova.png",
-    "assets/img/lana_lik.png",
-    "assets/img/lana_boo.png",
-    "assets/img/lana_mirror.png",
-    "assets/img/lana_grimuar.png",
-    "assets/img/warning.png"
+    "assets/img/vivian.webp",
+    "assets/img/sova.webp",
+    "assets/img/lana_lik.webp",
+    "assets/img/lana_boo.webp",
+    "assets/img/lana_mirror.webp",
+    "assets/img/lana_grimuar.webp",
+    "assets/img/warning.webp"
   ]
 
 

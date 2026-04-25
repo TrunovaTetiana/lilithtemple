@@ -2396,7 +2396,7 @@ function renderGamalielGatePage() {
 
       <div class="oracle-image-wrap">
         <img
-          src="assets/img/gamaliel_gate.png"
+          src="assets/img/gamaliel_gate.webp"
           alt="Gamaliel Gate"
           class="oracle-image" />
       </div>

@@ -28,10 +28,10 @@ const MOBILE_VIDEO_BREAKPOINT = 600;
 
 const VIDEO_SOURCES = {
   desktop: "assets/video/scene-desktop.mp4",
-  mobile: "assets/video/scene-mobile.mp4"
+  mobile: "assets/video/scene-desktop.mp4"
 };
 
-const CARD_ORDER = ["less-doll", "nina", "nina-voc", "serrano"];
+const CARD_ORDER = ["less-doll", "nina"];
 
 let currentVideoMode = null;
 let currentCardKey = null;

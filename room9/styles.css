@@ -155,30 +155,46 @@ body{
   background: rgba(110, 74, 41, 0.10);
 }
 
-.back-btn{
+.back-btn,
+.oracle-path{
   border: 1px solid rgba(92, 60, 28, 0.24);
   background: rgba(255,255,255,0.16);
   color: #3b291d;
+
   padding: 9px 16px;
   border-radius: 10px;
+
   cursor: pointer;
   font-size: 14px;
 }
 
-.back-btn:hover{
+.back-btn:hover,
+.oracle-path:hover{
   background: rgba(255,255,255,0.28);
 }
 
+
+
+
+
 .oracle-path{
+  border: 1px solid rgba(92, 60, 28, 0.24);
+  background: rgba(255,255,255,0.16);
+  color: #3b291d;
+
+  padding: 9px 16px;
+  border-radius: 10px;
+
   font-size: 14px;
-  color: #5c4430;
-  text-align: right;
   cursor: pointer;
+
+  text-align: center;
 }
 
 .oracle-path:hover{
-  opacity: 0.75;
+  background: rgba(255,255,255,0.28);
 }
+
 
 /* =========================================================
    CONTENT

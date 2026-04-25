@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Room 8 — Art Space</title>
+  <title>Art Space</title>
 
   <!--
     Cache busting:
     если Safari / Mac не видит изменения,
     просто меняй ?v=1 на ?v=2, ?v=3 и т.д.
   -->
-  <link rel="stylesheet" href="styles.css?v=344" />
+  <link rel="stylesheet" href="styles.css?v=534" />
 </head>
 <body>
 
@@ -25,24 +25,12 @@
   ========================================================== -->
   <main class="scene-container">
 
-    <!-- =====================================================
-         BACKGROUND VIDEO
-         Основной MP4 фон комнаты
-         Видео в loop, autoplay, muted, playsinline
-    ====================================================== -->
-    <video
-      class="scene-video"
-      id="sceneVideo"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="auto"
-    >
-      <source src="assets/video/art_scene_01.mp4" type="video/mp4" />
-      Ваш браузер не поддерживает видео.
-    </video>
-
+<!-- ===== SCENE IMAGE (ВМЕСТО VIDEO) ===== -->
+<img 
+  class="scene-image"
+  src="assets/img/art.webp"
+  alt="scene"
+/>
     <!-- =====================================================
          ROOM MUSIC
          Отдельная музыка комнаты
@@ -54,7 +42,7 @@
     ====================================================== -->
     <audio id="roomMusic" loop preload="auto">
       <source src="assets/audio/art_air.mp3" type="audio/mpeg" />
-      Ваш браузер не поддерживает аудио.
+      Your browser does not support the audio element.
     </audio>
 
     <!-- =====================================================
@@ -97,7 +85,7 @@
       type="button"
       aria-label="Вернуться в Hall Room 4"
     >
-      <img src="assets/img/sigil22.png" alt="Exit Sigil" />
+      <img src="assets/img/sigil22.webp" alt="Exit Sigil" />
     </button>
 
     <!-- =====================================================
@@ -173,7 +161,7 @@
 
       <!-- ===================================================
            CLOSE SIGIL
-           Золотой сигил / основной sigil.png
+           Золотой сигил / основной sigil.webp
            Закрывает overlay карточек
       ==================================================== -->
       <button
@@ -182,13 +170,13 @@
         type="button"
         aria-label="Закрыть карточки"
       >
-        <img src="assets/img/sigil.png" alt="Close Sigil" />
+        <img src="assets/img/sigil.webp" alt="Close Sigil" />
       </button>
 
       <!-- ===================================================
            LEFT ARROW
            Стрелка назад
-           Используем тот же PNG strelka.png
+           Используем тот же PNG strelka.webp
            В CSS потом можно отзеркалить / повернуть
       ==================================================== -->
       <button
@@ -197,23 +185,23 @@
         type="button"
         aria-label="Предыдущая карточка"
       >
-        <img src="assets/img/strelka.png" alt="Previous" />
+        <img src="assets/img/strelka.webp" alt="Previous" />
       </button>
 
       <!-- ===================================================
            CURRENT CARD IMAGE
            Здесь JS будет подставлять нужную PNG карточку
            Например:
-           tata1.png
-           tata2.png
-           vivian.png
-           warning.png
+           tata1.webp
+           tata2.webp
+           vivian.webp
+           warning.webp
       ==================================================== -->
       <div class="card-frame">
         <img
           class="card-image"
           id="cardImage"
-          src="assets/img/tata1.png"
+          src="assets/img/tata1.webp"
           alt="Card"
         />
       </div>
@@ -228,7 +216,7 @@
         type="button"
         aria-label="Следующая карточка"
       >
-        <img src="assets/img/strelka.png" alt="Next" />
+        <img src="assets/img/strelka.webp" alt="Next" />
       </button>
 
     </div>
@@ -245,6 +233,6 @@
        - music toggle
        - exit to Room 4
   ========================================================== -->
-  <script src="app.js?v=344"></script>
+  <script src="app.js?v=534"></script>
 </body>
 </html>

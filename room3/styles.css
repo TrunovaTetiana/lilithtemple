@@ -4,69 +4,18 @@ body {
   font-family: sans-serif;
 }
 
-/* 🎥 VIDEO */
-.bg-video {
-  position: fixed;
+.scene-image{
+  position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
+  display: block;
 }
 
-/* 🎧 SOUND BUTTON */
-.sound-btn {
-  position: absolute;
-  left: 10%;
-  bottom: 12%;
-  z-index: 20;
 
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: none;
 
-  background: rgba(20,10,8,0.5);
-  color: #ffd6a0;
-
-  cursor: pointer;
-
-  -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
-  outline: none;
-}
-
-.sound-btn:focus,
-.sound-btn:active,
-.sound-btn:focus-visible {
-  outline: none;
-  box-shadow: none;
-  background: rgba(20,10,8,0.5);
-}
-
-/* 🎬 VIDEO START */
-.video-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 30;
-
-  padding: 12px 20px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-
-  -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
-  outline: none;
-}
-
-.video-btn:focus,
-.video-btn:active,
-.video-btn:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
 
 /* 🜏 SIGIL */
 .sigil {
@@ -121,24 +70,24 @@ body {
 
 /* Базовые координаты — как запасной вариант */
 .hotspot-left {
-  left: 19%;
-  top: 62%;
-  width: 6%;
-  height: 8%;
+  left: 22%;
+  top: 25%;
+  width: 13%;
+  height: 50%;
 }
 
 .hotspot-center {
-  left: 47%;
-  top: 62%;
-  width: 6%;
-  height: 8%;
+  left: 44%;
+  top: 25%;
+  width: 13%;
+  height: 50%;
 }
 
 .hotspot-right {
-  right: 18%;
-  top: 62%;
-  width: 6%;
-  height: 8%;
+  right: 21%;
+  top: 25%;
+  width: 13%;
+  height: 50%;
 }
 
 /* =========================
@@ -205,32 +154,26 @@ body {
     bottom: 4%;
   }
 
-  .sound-btn {
-    left: 10%;
-    bottom: 6%;
-    font-size: 18px;
-    padding: 10px 18px;
-  }
 
   .hotspot-left {
-    left: 19%;
-    top: 65%;
-    width: 6%;
-    height: 8%;
+    left: 21%;
+    top: 25%;
+    width: 13%;
+    height: 65%;
   }
 
   .hotspot-center {
-    left: 47%;
-    top: 65%;
-    width: 6%;
-    height: 8%;
+    left: 44%;
+    top: 25%;
+    width: 13%;
+    height: 65%;
   }
 
   .hotspot-right {
-    right: 18%;
-    top: 65%;
-    width: 6%;
-    height: 8%;
+    right: 21%;
+    top: 25%;
+    width: 13%;
+    height: 65%;
   }
 }
 
@@ -244,32 +187,26 @@ body {
     bottom: 5%;
   }
 
-  .sound-btn {
-    left: 8%;
-    bottom: 8%;
-    font-size: 15px;
-    padding: 10px 15px;
-  }
 
   .hotspot-left {
-    left: 19%;
-    top: 62%;
-    width: 6%;
-    height: 8%;
+    left: 21%;
+    top: 25%;
+    width: 13%;
+    height: 50%;
   }
 
   .hotspot-center {
-    left: 47%;
-    top: 62%;
-    width: 6%;
-    height: 8%;
+    left: 44%;
+    top: 25%;
+    width: 13%;
+    height: 50%;
   }
 
   .hotspot-right {
-    right: 18%;
-    top: 62%;
-    width: 6%;
-    height: 8%;
+    right: 21%;
+    top: 25%;
+    width: 13%;
+    height: 50%;
   }
 }
 
@@ -283,32 +220,26 @@ body {
     bottom: 3%;
   }
 
-  .sound-btn {
-    left: 4%;
-    bottom: 4%;
-    font-size: 14px;
-    padding: 9px 14px;
-  }
 
   .hotspot-left {
-    left: 18%;
-    top: 62%;
-    width: 6%;
-    height: 8%;
+    left: 21%;
+    top: 24%;
+    width: 15%;
+    height: 50%;
   }
 
   .hotspot-center {
-    left: 47%;
-    top: 62%;
-    width: 6%;
-    height: 8%;
+    left: 44%;
+    top: 25%;
+    width: 15%;
+    height: 50%;
   }
 
   .hotspot-right {
-    right: 17%;
-    top: 62%;
-    width: 6%;
-    height: 8%;
+    right: 21%;
+    top: 25%;
+    width: 15%;
+    height: 50%;
   }
 }
 
@@ -322,32 +253,26 @@ body {
     bottom: 2%;
   }
 
-  .sound-btn {
-    left: 8%;
-    bottom: 5%;
-    font-size: 16px;
-    padding: 8px 16px;
-  }
 
   .hotspot-left {
     left: 9%;
-    top: 59%;
-    width: 6%;
-    height: 8%;
+    top: 25%;
+    width: 17%;
+    height: 50%;
   }
 
   .hotspot-center {
-    left: 47%;
-    top: 59%;
-    width: 6%;
-    height: 8%;
+    left: 42%;
+    top: 25%;
+    width: 17%;
+    height: 50%;
   }
 
   .hotspot-right {
-    right: 8%;
-    top: 59%;
-    width: 6%;
-    height: 8%;
+    right: 10%;
+    top: 25%;
+    width: 17%;
+    height: 50%;
   }
 }
 
@@ -369,17 +294,6 @@ body {
     bottom: 108px;
   }
 
-  .sound-btn {
-    left: 4%;
-    bottom: 108px;
-    font-size: 12px;
-    padding: 8px 12px;
-  }
-
-  .video-btn {
-    font-size: 14px;
-    padding: 10px 18px;
-  }
 }
 
 /* =========================
@@ -403,11 +317,6 @@ body {
     bottom: 122px;
   }
 
-  .sound-btn {
-    bottom: 135px;
-    font-size: 11px;
-    padding: 7px 10px;
-  }
 }
 
 /* =========================
@@ -421,32 +330,26 @@ body {
     bottom: 5%;
   }
 
-  .sound-btn {
-    left: 8%;
-    bottom: 8%;
-    font-size: 15px;
-    padding: 10px 15px;
-  }
 
   .hotspot-left {
     left: 10%;
-    top: 59%;
-    width: 6%;
-    height: 8%;
+    top: 25%;
+    width: 20%;
+    height: 50%;
   }
 
   .hotspot-center {
-    left: 47%;
-    top: 59%;
-    width: 6%;
-    height: 8%;
+    left: 40%;
+    top: 25%;
+    width: 20%;
+    height: 50%;
   }
 
   .hotspot-right {
-    right: 9%;
-    top: 59%;
-    width: 6%;
-    height: 8%;
+    right: 8%;
+    top: 25%;
+    width: 20%;
+    height: 50%;
   }
 }
 
@@ -461,35 +364,28 @@ body {
     bottom: 6%;
   }
 
-  .sound-btn {
-    left: 8%;
-    bottom: 8%;
-    font-size: 18px;
-    padding: 10px 18px;
-  }
 
   .hotspot-left {
-    left: 19%;
-    top: 58%;
-    width: 6%;
-    height: 16%;
+    left: 20%;
+    top: 25%;
+    width: 14%;
+    height: 65%;
   }
 
   .hotspot-center {
-    left: 47%;
-    top: 58%;
-    width: 6%;
-    height: 16%;
+    left: 43%;
+    top: 25%;
+    width: 14%;
+    height: 65%;
   }
 
   .hotspot-right {
-    right: 18%;
-    top: 58%;
-    width: 6%;
-    height: 16%;
+    right: 20%;
+    top: 25%;
+    width: 14%;
+    height: 65%;
   }
 }
-
 
 
 

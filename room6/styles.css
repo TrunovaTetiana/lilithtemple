@@ -1,9 +1,9 @@
 /* =================================================
    Garden Lilith — room6 / styles.css
-   Базовый fullscreen CSS для video-based room
+   Clean fade version: 4 videos + layered music
    ================================================= */
 
-/* ---------- СБРОС ---------- */
+/* ---------- RESET ---------- */
 html,
 body{
   margin: 0;
@@ -14,12 +14,11 @@ body{
   background: #000;
 }
 
-/* чтобы браузер не добавлял лишнюю прокрутку */
 body{
   position: relative;
 }
 
-/* ---------- ОСНОВНОЙ КОНТЕЙНЕР ---------- */
+/* ---------- MAIN CONTAINER ---------- */
 .garden-scene{
   position: relative;
   width: 100vw;
@@ -28,19 +27,23 @@ body{
   background: #000;
 }
 
-/* ---------- ВИДЕО-СЛОИ ---------- */
+/* ---------- VIDEO LAYERS ---------- */
 .scene-video{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
   object-fit: cover;
+  object-position: center center;
+
   opacity: 0;
-  transition: opacity 1.6s ease-in-out;
+  transition: opacity 1.8s ease-in-out;
+
+  z-index: 1;
   pointer-events: none;
   background: #000;
-  z-index: 1;
 }
 
 .scene-video.active{
@@ -48,7 +51,7 @@ body{
   z-index: 2;
 }
 
-/* ---------- КНОПКА МУЗЫКИ ---------- */
+/* ---------- MUSIC BUTTON ---------- */
 .music-btn{
   position: absolute;
   left: 5%;
@@ -127,28 +130,23 @@ body{
   filter: drop-shadow(0 0 12px rgba(255,180,120,0.4));
 }
 
-/* =================================================
-   MOBILE FIX — BUTTON POSITIONS (Garden Room)
-   ================================================= */
-
+/* ---------- MOBILE FIX ---------- */
 @media (max-width: 600px) {
-  .music-btn {
+  .music-btn{
     bottom: 12%;
   }
 
-  .sigil-btn {
+  .sigil-btn{
     bottom: 9%;
   }
 }
 
 @media (max-width: 420px) {
-  .music-btn {
+  .music-btn{
     bottom: 14%;
   }
 
-  .sigil-btn {
+  .sigil-btn{
     bottom: 11%;
   }
 }
-
-
