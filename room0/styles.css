@@ -1,0 +1,349 @@
+@font-face{
+  font-family: "LilithGothic";
+  src: url("../room1/assets/fonts/CinzelDecorative-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* =========================================================
+   🜏 ROOM 0 — STATIC ENTRANCE
+========================================================= */
+
+:root{
+  --ink: #d8d3c9;
+}
+
+html,
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background: #000;
+  overflow: hidden;
+  font-family: "Papyrus", "URW Chancery L", "Cinzel Decorative", "LilithGothic", serif;
+  color: var(--ink);
+}
+
+/* =========================================================
+   STATIC SCENE
+========================================================= */
+
+.scene-container{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.scene-image{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* =========================================================
+   ATMOSPHERIC OVERLAYS
+========================================================= */
+
+.water,
+.moon-mist{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.water{
+  display: none;
+}
+
+.moon-mist{
+  z-index: 2;
+
+  background:
+    radial-gradient(
+      520px 380px at 22% 18%,
+      rgba(255, 240, 220, 0.12) 0%,
+      rgba(255, 220, 180, 0.06) 38%,
+      rgba(0,0,0,0.00) 72%
+    ),
+    radial-gradient(
+      640px 440px at 28% 22%,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.03) 45%,
+      rgba(0,0,0,0.00) 78%
+    );
+
+  mix-blend-mode: screen;
+  filter: blur(1.6px);
+  opacity: 0.34;
+  animation: moonMist 9.5s ease-in-out infinite;
+}
+
+@keyframes moonMist{
+  0%{
+    transform: translate(-0.7%, -0.2%) scale(1.00);
+    opacity: 0.22;
+  }
+  50%{
+    transform: translate(0.9%, 0.5%) scale(1.03);
+    opacity: 0.42;
+  }
+  100%{
+    transform: translate(-0.7%, -0.2%) scale(1.00);
+    opacity: 0.22;
+  }
+}
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.temple{
+  position: relative;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 6vh;
+}
+
+.whisper{
+  max-width: 720px;
+  padding: 18px 22px;
+  border-radius: 14px;
+
+  background: rgba(0,0,0,0.10);
+  box-shadow: 0 0 25px rgba(0,0,0,0.22);
+
+  text-align: center;
+}
+
+.line{
+  display: block;
+  margin: 10px 0;
+
+  font-size: 19px;
+  letter-spacing: 0.6px;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #fff3b0 18%,
+    #ffcf4a 40%,
+    #ff8a00 62%,
+    #ffd7a3 100%
+  );
+  background-size: 220% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow:
+    0 0 8px rgba(255, 190, 80, 0.45),
+    0 0 16px rgba(255, 120, 0, 0.30),
+    0 1px 0 rgba(0,0,0,0.35);
+
+  -webkit-text-stroke: 0.2px rgba(0,0,0,0.20);
+
+  animation:
+    lineIn 1.2s ease forwards,
+    ember 2.6s ease-in-out infinite;
+
+  animation-delay: var(--d, 0s), calc(var(--d, 0s) + 0.15s);
+}
+
+.line.final{
+  font-size: 22px;
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #fff7cc 22%,
+    #ffd35a 45%,
+    #ff9a1a 68%,
+    #fff0c9 100%
+  );
+  background-size: 240% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow:
+    0 0 10px rgba(255, 210, 120, 0.55),
+    0 0 22px rgba(255, 130, 0, 0.35),
+    0 1px 0 rgba(0,0,0,0.30);
+}
+
+@keyframes lineIn{
+  from{
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(1px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes ember{
+  0%{ background-position: 0% 50%; }
+  50%{ background-position: 100% 50%; }
+  100%{ background-position: 0% 50%; }
+}
+
+/* =========================================================
+   SIGIL
+========================================================= */
+
+.sigil-gate{
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 20;
+
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sigil-gate a{
+  display: block;
+}
+
+.sigil-gate img{
+  width: 120px;
+  opacity: 0.9;
+  cursor: pointer;
+
+  filter:
+    brightness(1.2)
+    contrast(1.1)
+    drop-shadow(0 0 12px rgba(255,170,70,0.8));
+
+  mix-blend-mode: screen;
+  animation: sigilPulse 4s ease-in-out infinite;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.sigil-gate img:hover{
+  transform: scale(1.1);
+  filter:
+    brightness(1.35)
+    contrast(1.15)
+    drop-shadow(0 0 20px rgba(255,200,120,0.95));
+}
+
+@keyframes sigilPulse{
+  0%{
+    transform: scale(1);
+    filter: brightness(1.1) drop-shadow(0 0 8px rgba(255,170,70,0.6));
+  }
+  50%{
+    transform: scale(1.08);
+    filter: brightness(1.4) drop-shadow(0 0 20px rgba(255,200,120,0.9));
+  }
+  100%{
+    transform: scale(1);
+    filter: brightness(1.1) drop-shadow(0 0 8px rgba(255,170,70,0.6));
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (min-width: 1200px) and (max-height: 900px){
+  .temple{ padding-top: 10vh; }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px){
+  .temple{ padding-top: 8vh; }
+}
+
+@media (min-width: 821px) and (max-width: 999px){
+  .temple{ padding-top: 9vh; }
+  .whisper{ max-width: 78%; }
+}
+
+@media (min-width: 601px) and (max-width: 820px){
+  .temple{ padding-top: 12vh; }
+
+  .whisper{
+    max-width: 84%;
+    padding: 16px 18px;
+  }
+
+  .line{
+    font-size: 17px;
+    margin: 9px 0;
+  }
+
+  .line.final{ font-size: 19px; }
+
+  .sigil-gate img{ width: 104px; }
+}
+
+@media (max-width: 600px){
+  .temple{ padding-top: 18vh; }
+
+  .whisper{
+    max-width: 88%;
+    padding: 14px 16px;
+  }
+
+  .line{
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .line.final{ font-size: 18px; }
+
+  .sigil-gate{ bottom: 18px; }
+
+  .sigil-gate img{ width: 96px; }
+}
+
+@media (max-width: 420px){
+  .temple{ padding-top: 20vh; }
+
+  .whisper{
+    max-width: 90%;
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+
+  .line{
+    font-size: 15px;
+    margin: 7px 0;
+  }
+
+  .line.final{ font-size: 17px; }
+
+  .sigil-gate img{ width: 88px; }
+}
+
+@media (min-width: 1400px) and (min-height: 850px){
+  .temple{ padding-top: 20vh; }
+}
