@@ -457,8 +457,8 @@ Blessed is the Queen, Mother Lilith!
 Sanctified is the Name of Lilith!
 
 _(repeat 3 times)_">
-    Бериху малка Ама Лилит!  
-    Кодеш ха-ашем Лилит!
+    Бериху Mалка Ама Лилит!  
+    Кодеш Xа-Aшем Лилит!
   </p>
 </div>
 
@@ -536,264 +536,414 @@ function renderAddressesPage() {
 
   content.innerHTML = `
     <h2 data-ru="Обращение к Богине Лилит" data-en="Invocation to Goddess Lilith">
-  Обращение к Богине Лилит
-</h2>
+      Обращение к Богине Лилит
+    </h2>
 
-<p class="oracle-intro"
-data-ru="Перед тем как приступить к обращению, остановитесь на мгновение."
-data-en="Before you begin the invocation, pause for a moment.">
-Перед тем как приступить к обращению,  
-остановитесь на мгновение.
-</p>
+    <p class="oracle-intro"
+      data-ru="Перед тем как приступить к обращению, остановитесь на мгновение."
+      data-en="Before you begin the invocation, pause for a moment.">
+      Перед тем как приступить к обращению, остановитесь на мгновение.
+    </p>
 
-<p
-data-ru="Освободите свои мысли. Отпустите внутренний поток."
-data-en="Release your thoughts. Let go of the inner flow.">
-Освободите свои мысли.  
-Отпустите внутренний поток.
-</p>
+    <p
+      data-ru="Освободите свои мысли. Отпустите внутренний поток."
+      data-en="Release your thoughts. Let go of the inner flow.">
+      Освободите свои мысли. Отпустите внутренний поток.
+    </p>
 
-<p
-data-ru="Зажгите благовоние по соответствию. Сделайте глубокий вдох. Настройтесь."
-data-en="Light incense according to correspondence. Take a deep breath. Center yourself.">
-Зажгите благовоние по соответствию.  
-Сделайте глубокий вдох.  
-Настройтесь.
-</p>
+    <p
+      data-ru="Зажгите благовоние по соответствию. Сделайте глубокий вдох. Настройтесь."
+      data-en="Light incense according to correspondence. Take a deep breath. Center yourself.">
+      Зажгите благовоние по соответствию. Сделайте глубокий вдох. Настройтесь.
+    </p>
 
-<p
-data-ru="Не стремитесь понять слова — позвольте им пройти через Вас."
-data-en="Do not try to understand the words — allow them to pass through you.">
-Не стремитесь понять слова —  
-позвольте им пройти через Вас.
-</p>
+    <p
+      data-ru="Не стремитесь понять слова — позвольте им пройти через Вас."
+      data-en="Do not try to understand the words — allow them to pass through you.">
+      Не стремитесь понять слова — позвольте им пройти через Вас.
+    </p>
 
-<p
-data-ru="Выберите ту форму обращения, которая откликается Вам."
-data-en="Choose the form of invocation that resonates with you.">
-Выберите ту форму обращения,  
-которая откликается Вам.
-</p>
+    <p
+      data-ru="Выберите ту форму обращения, которая откликается Вам."
+      data-en="Choose the form of invocation that resonates with you.">
+      Выберите ту форму обращения, которая откликается Вам.
+    </p>
 
-<p
-data-ru="Вы можете читать с листа — со временем слова сами закрепятся внутри Вас."
-data-en="You may read from the text — with time, the words will settle naturally within you.">
-Вы можете читать с листа —  
-со временем слова сами закрепятся внутри Вас.
-</p>
+    <p
+      data-ru="Вы можете читать с листа — со временем слова сами закрепятся внутри Вас."
+      data-en="You may read from the text — with time, the words will settle naturally within you.">
+      Вы можете читать с листа — со временем слова сами закрепятся внутри Вас.
+    </p>
 
-<p
-data-ru="Не напрягайтесь. Расслабьтесь и просто произнесите."
-data-en="Do not strain. Relax and simply speak.">
-Не напрягайтесь.  
-Расслабьтесь и просто произнесите.
-</p>
+    <p
+      data-ru="Не напрягайтесь. Расслабьтесь и просто произнесите."
+      data-en="Do not strain. Relax and simply speak.">
+      Не напрягайтесь. Расслабьтесь и просто произнесите.
+    </p>
 
-<p
-data-ru="Важно не то, как Вы говорите, а то, что Вы вкладываете."
-data-en="What matters is not how you speak, but what you bring into it.">
-Важно не то, как Вы говорите,  
-а то, что Вы вкладываете.
-</p>
+    <p
+      data-ru="Важно не то, как Вы говорите, а то, что Вы вкладываете."
+      data-en="What matters is not how you speak, but what you bring into it.">
+      Важно не то, как Вы говорите, а то, что Вы вкладываете.
+    </p>
 
-<p
-data-ru="Богиня Лилит слышит Ваше намерение, Вашу энергию, Ваше внутреннее состояние."
-data-en="Goddess Lilith hears your intention, your energy, your inner state.">
-Богиня Лилит слышит Ваше намерение,  
-Вашу энергию,  
-Ваше внутреннее состояние.
-</p>
+    <p
+      data-ru="Богиня Лилит слышит Ваше намерение, Вашу энергию, Ваше внутреннее состояние."
+      data-en="Goddess Lilith hears your intention, your energy, and your inner state.">
+      Богиня Лилит слышит Ваше намерение, Вашу энергию, Ваше внутреннее состояние.
+    </p>
 
-<div class="oracle-divider">✶</div>
+    <div class="oracle-divider">✶</div>
 
-<h3 class="oracle-small-title">🜂 I. Молитва — обращение (допуск к древней мудрости)</h3>
+    <h3 class="oracle-small-title"
+      data-ru="🜂 I. Молитва — обращение (допуск к древней мудрости)"
+      data-en="🜂 I. Prayer — Invocation (Access to Ancient Wisdom)">
+      🜂 I. Молитва — обращение (допуск к древней мудрости)
+    </h3>
 
-<div class="oracle-verse">
-<p>
-O Lilith, Mater Noctis, Regina Abysso,  
+    <div class="oracle-verse">
+      <p>
+O Lilith, Mater Noctis, Regina Abysso,
 Domina Tenebrarum, Audi! Audi! Audi!
 
-Ex imo animae meae te invoco,  
+Ex imo animae meae te invoco,
 Ex silentio, ex umbra, ex profundo.
 
-Aperi! Aperi! Aperi portas occultas!  
-Revela mysteria antiqua,  
+Aperi! Aperi! Aperi portas occultas!
+Revela mysteria antiqua,
 Arcana sub nocte custodita.
 
-Da mihi oculos qui vident in tenebris,  
-Da mihi aures quae audiunt silentium,  
+Da mihi oculos qui vident in tenebris,
+Da mihi aures quae audiunt silentium,
 Da mihi mentem quae penetrat velum.
 
-Per voluntatem meam — fiat!  
-Per ignem interiorem — mutentur fata!  
+Per voluntatem meam — fiat!
+Per ignem interiorem — mutentur fata!
 Per verbum occultum — obediant eventa!
 
-Duce me, Lilith, per vias obscuras,  
-Ubi veritas latet et potentia dormit.  
-Esto magistra mea, esto dux mea,  
+Duce me, Lilith, per vias obscuras,
+Ubi veritas latet et potentia dormit.
+Esto magistra mea, esto dux mea,
 Esto custos in limine ignoti.
 
-Infunde in me vim noctis,  
-Sapientiam vetustam,  
+Infunde in me vim noctis,
+Sapientiam vetustam,
 Et potentiam quae non frangitur.
 
-Audi me! Exaudi me! Responde mihi!  
+Audi me! Exaudi me! Responde mihi!
 Per noctem, per umbram, per arcana tua!
 
 Sic volo. Sic fiat. Sic est.
-</p>
-</div>
+      </p>
+    </div>
 
-<div class="oracle-verse">
-<p>
-О Лилит, Матерь Ночи, Царица Бездны,  
+    <div class="oracle-verse">
+      <p
+        data-ru="О Лилит, Матерь Ночи, Царица Бездны,
 Владычица Тьмы, услышь! Услышь! Услышь!
 
-Из глубины души моей я взываю к тебе,  
+Из глубины души моей я взываю к тебе,
 Из тишины, из тени, из глубин.
 
-Открой! Открой! Открой сокрытые врата!  
-Раскрой древние тайны,  
+Открой! Открой! Открой сокрытые врата!
+Раскрой древние тайны,
 Сокрытые под покровом ночи.
 
-Даруй мне глаза, видящие во тьме,  
-Даруй мне уши, слышащие тишину,  
+Даруй мне глаза, видящие во тьме,
+Даруй мне уши, слышащие тишину,
 Даруй мне разум, проникающий сквозь завесу.
 
-По воле моей — да свершится!  
-Через внутренний огонь — да изменится судьба!  
+По воле моей — да свершится!
+Через внутренний огонь — да изменится судьба!
 Словом тайным — да подчинятся события!
 
-Веди меня, Лилит, путями тёмными,  
-Где истина сокрыта и сила спит.  
-Будь моей наставницей, будь моим проводником,  
+Веди меня, Лилит, путями тёмными,
+Где истина сокрыта и сила спит.
+Будь моей наставницей, будь моим проводником,
 Будь стражем на границе неведомого.
 
-Влей в меня силу ночи,  
-Древнюю мудрость,  
+Влей в меня силу ночи,
+Древнюю мудрость,
 И мощь, которую невозможно сломить.
 
-Услышь меня! Внемли мне! Ответь мне!  
+Услышь меня! Внемли мне! Ответь мне!
+Через ночь, через тень, через твои тайны.
+
+Так я желаю. Да будет так. Так есть."
+        data-en="O Lilith, Mother of Night, Queen of the Abyss,
+Mistress of Darkness, hear me! Hear me! Hear me!
+
+From the depths of my soul I call to you,
+From silence, from shadow, from the deep.
+
+Open! Open! Open the hidden gates!
+Reveal the ancient mysteries,
+Guarded beneath the veil of night.
+
+Grant me eyes that see in darkness,
+Grant me ears that hear silence,
+Grant me a mind that pierces the veil.
+
+By my will — let it be done!
+Through the inner fire — let fate be changed!
+By the hidden word — let events obey!
+
+Guide me, Lilith, through the dark paths,
+Where truth is concealed and power sleeps.
+Be my teacher, be my guide,
+Be the guardian at the threshold of the unknown.
+
+Pour into me the power of night,
+Ancient wisdom,
+And strength that cannot be broken.
+
+Hear me! Receive me! Answer me!
+Through night, through shadow, through your mysteries!
+
+So I will. So let it be. So it is.">
+О Лилит, Матерь Ночи, Царица Бездны,
+Владычица Тьмы, услышь! Услышь! Услышь!
+
+Из глубины души моей я взываю к тебе,
+Из тишины, из тени, из глубин.
+
+Открой! Открой! Открой сокрытые врата!
+Раскрой древние тайны,
+Сокрытые под покровом ночи.
+
+Даруй мне глаза, видящие во тьме,
+Даруй мне уши, слышащие тишину,
+Даруй мне разум, проникающий сквозь завесу.
+
+По воле моей — да свершится!
+Через внутренний огонь — да изменится судьба!
+Словом тайным — да подчинятся события!
+
+Веди меня, Лилит, путями тёмными,
+Где истина сокрыта и сила спит.
+Будь моей наставницей, будь моим проводником,
+Будь стражем на границе неведомого.
+
+Влей в меня силу ночи,
+Древнюю мудрость,
+И мощь, которую невозможно сломить.
+
+Услышь меня! Внемли мне! Ответь мне!
 Через ночь, через тень, через твои тайны.
 
 Так я желаю. Да будет так. Так есть.
-</p>
-</div>
+      </p>
+    </div>
 
-<div class="oracle-divider">✶</div>
+    <div class="oracle-divider">✶</div>
 
-<h3 class="oracle-small-title">🜂 II. Заклинание — формула обращения</h3>
+    <h3 class="oracle-small-title"
+      data-ru="🜂 II. Заклинание — формула обращения"
+      data-en="🜂 II. Incantation — Formula of Invocation">
+      🜂 II. Заклинание — формула обращения
+    </h3>
 
-<div class="oracle-verse">
-<p>
-O Lilith, regina noctis aeternae,  
-Custos arcanae sapientiae et ignis primi,  
-Evoco te per umbras et silentium vetus,  
-Infunde in me vim tuam et mentem profundam,  
-Ut videam quod latet, ut sciam quod clausum est,  
-Per te surgo - mutata, fortis, immortalis!  
-Per noctem et verbum antiquum,  
+    <div class="oracle-verse">
+      <p>
+O Lilith, regina noctis aeternae,
+Custos arcanae sapientiae et ignis primi,
+Evoco te per umbras et silentium vetus,
+Infunde in me vim tuam et mentem profundam,
+Ut videam quod latet, ut sciam quod clausum est,
+Per te surgo - mutata, fortis, immortalis!
+Per noctem et verbum antiquum,
 Vis et sapientia Lilith - in me manent.
 
 _(3 раза)_
-</p>
-</div>
+      </p>
+    </div>
 
-<div class="oracle-verse">
-<p>
-О Лилит, королева вечной ночи,  
-Хранительница тайной мудрости и первичного огня,  
+    <div class="oracle-verse">
+      <p
+        data-ru="О Лилит, королева вечной ночи,
+Хранительница тайной мудрости и первичного огня,
 Я призываю тебя через тени и древнюю тишину,
 
-Влей в меня свою силу и глубокий разум,  
-Чтобы я видела скрытое и знала закрытое,  
+Влей в меня свою силу и глубокий разум,
+Чтобы я видела скрытое и знала закрытое,
 Через тебя я восстаю — изменённая, сильная, бессмертная.
 
-Через ночь и древнее слово,  
+Через ночь и древнее слово,
+Сила и мудрость Лилит пребывают во мне.
+
+_(3 раза)_"
+        data-en="O Lilith, Queen of Eternal Night,
+Keeper of hidden wisdom and primal fire,
+I invoke you through shadows and ancient silence,
+
+Pour into me your power and deep mind,
+So that I may see what is hidden and know what is sealed,
+Through you I rise — changed, strong, immortal.
+
+Through night and the ancient word,
+The power and wisdom of Lilith remain within me.
+
+_(repeat 3 times)_">
+О Лилит, королева вечной ночи,
+Хранительница тайной мудрости и первичного огня,
+Я призываю тебя через тени и древнюю тишину,
+
+Влей в меня свою силу и глубокий разум,
+Чтобы я видела скрытое и знала закрытое,
+Через тебя я восстаю — изменённая, сильная, бессмертная.
+
+Через ночь и древнее слово,
 Сила и мудрость Лилит пребывают во мне.
 
 _(3 раза)_
-</p>
-</div>
+      </p>
+    </div>
 
-<div class="oracle-divider">✶</div>
+    <div class="oracle-divider">✶</div>
 
-<h3 class="oracle-small-title">🜂 III. Сакральное теургическое воззвание</h3>
+    <h3 class="oracle-small-title"
+      data-ru="🜂 III. Сакральное теургическое воззвание"
+      data-en="🜂 III. Sacred Theurgic Invocation">
+      🜂 III. Сакральное теургическое воззвание
+    </h3>
 
-<div class="oracle-verse">
-<p>
-(Повторить 10 раз)
+    <div class="oracle-verse">
+      <p
+        data-ru="(Повторить 10 раз)"
+        data-en="(Repeat 10 times)">
+        (Повторить 10 раз)
+      </p>
 
-Mea meshaver Lilith Vokash Dur Hen  
-Gifhat!  
-Cherufsh Gash Gash Lilith! Barresh Lilith!  
-Loamhver Lilith av dzenna Roksheh  
-Dilponeas Fuliom FusHenn Lilitha!  
-Lilith Dizot Lilith Polvdashem!  
-Lilith Akshuzz Siverkah Umhas Touza!  
-Lilith mea hah tavera Bufthor!  
-Lilith umorhes Father!  
+      <p>
+Mea meshaver Lilith Vokash Dur Hen
+Gifhat!
+Cherufsh Gash Gash Lilith! Barresh Lilith!
+Loamhver Lilith av dzenna Roksheh
+Dilponeas Fuliom FusHenn Lilitha!
+Lilith Dizot Lilith Polvdashem!
+Lilith Akshuzz Siverkah Umhas Touza!
+Lilith mea hah tavera Bufthor!
+Lilith umorhes Father!
 Lilith Tash Molhafs Ashehersa!
-</p>
-</div>
+      </p>
+    </div>
 
-<div class="oracle-divider">✶</div>
+    <div class="oracle-divider">✶</div>
 
-<h3 class="oracle-small-title">🜂 IV. Утренняя молитва</h3>
+    <h3 class="oracle-small-title"
+      data-ru="🜂 IV. Утренняя молитва"
+      data-en="🜂 IV. Morning Prayer">
+      🜂 IV. Утренняя молитва
+    </h3>
 
-<div class="oracle-verse">
-<p>
-О Лилит, Владычица Вечной Ночи,  
-Царица Тайн и Хранительница Скрытого Огня,  
+    <div class="oracle-verse">
+      <p
+        data-ru="О Лилит, Владычица Вечной Ночи,
+Царица Тайн и Хранительница Скрытого Огня,
 На заре я взываю к Тебе и именем Твоим себя ограждаю.
 
-Влей в меня сокровенный свет Твоей мудрости,  
-Открой мои внутренние очи к скрытым мистериям.  
-Зажги во мне огонь видения и знания,  
+Влей в меня сокровенный свет Твоей мудрости,
+Открой мои внутренние очи к скрытым мистериям.
+Зажги во мне огонь видения и знания,
 Да рассеется покров иллюзии пред моим взором.
 
-Укрепи мою волю,  
-Освяти мой дух,  
+Укрепи мою волю,
+Освяти мой дух,
 И направь мои шаги по невидимым путям.
 
-Да будет мой голос проводником истины,  
-Да будет мой разум твёрдым и сосредоточенным,  
+Да будет мой голос проводником истины,
+Да будет мой разум твёрдым и сосредоточенным,
 Да пройдет этот день под знаком Твоей силы.
 
-Под сенью Твоих крыл я иду  
+Под сенью Твоих крыл я иду
+Защищённая, бдительная и осознанная.
+
+Да будет так!"
+        data-en="O Lilith, Lady of the Eternal Night,
+Queen of Mysteries and Keeper of the Hidden Fire,
+At dawn I call upon You and shelter myself in Your name.
+
+Pour into me the secret light of Your wisdom,
+Open my inner eyes to hidden mysteries.
+Kindle within me the fire of vision and knowledge,
+Let the veil of illusion dissolve before my sight.
+
+Strengthen my will,
+Consecrate my spirit,
+And guide my steps along unseen paths.
+
+May my voice become a vessel of truth,
+May my mind remain firm and focused,
+May this day pass under the sign of Your power.
+
+Beneath the shadow of Your wings I walk
+Protected, watchful, and aware.
+
+So let it be!">
+О Лилит, Владычица Вечной Ночи,
+Царица Тайн и Хранительница Скрытого Огня,
+На заре я взываю к Тебе и именем Твоим себя ограждаю.
+
+Влей в меня сокровенный свет Твоей мудрости,
+Открой мои внутренние очи к скрытым мистериям.
+Зажги во мне огонь видения и знания,
+Да рассеется покров иллюзии пред моим взором.
+
+Укрепи мою волю,
+Освяти мой дух,
+И направь мои шаги по невидимым путям.
+
+Да будет мой голос проводником истины,
+Да будет мой разум твёрдым и сосредоточенным,
+Да пройдет этот день под знаком Твоей силы.
+
+Под сенью Твоих крыл я иду
 Защищённая, бдительная и осознанная.
 
 Да будет так!
-</p>
-</div>
+      </p>
+    </div>
 
-<div class="oracle-divider">✶</div>
+    <div class="oracle-divider">✶</div>
 
-<h3 class="oracle-small-title">🜂 V. Молитва — глубокое обращение</h3>
+    <h3 class="oracle-small-title"
+      data-ru="🜂 V. Молитва — глубокое обращение"
+      data-en="🜂 V. Prayer — Deep Invocation">
+      🜂 V. Молитва — глубокое обращение
+    </h3>
 
-<div class="oracle-verse">
-<p>
-🌑 О, Великая Тёмная Мать, о Лилит, Повелительница Теней и Света!  
-Прими меня под своё крыло —  
-крыло мудрости, крыло силы, крыло строптивой свободы.  
-Прими меня, Лилит.  
+    <div class="oracle-verse">
+      <p
+        data-ru="🌑 О, Великая Тёмная Мать, о Лилит, Повелительница Теней и Света!
+Прими меня под своё крыло —
+крыло мудрости, крыло силы, крыло строптивой свободы.
+Прими меня, Лилит.
+Прими меня."
+        data-en="🌑 O Great Dark Mother, O Lilith, Mistress of Shadows and Light!
+Receive me beneath Your wing —
+the wing of wisdom, the wing of power, the wing of untamed freedom.
+Receive me, Lilith.
+Receive me.">
+🌑 О, Великая Тёмная Мать, о Лилит, Повелительница Теней и Света!
+Прими меня под своё крыло —
+крыло мудрости, крыло силы, крыло строптивой свободы.
+Прими меня, Лилит.
 Прими меня.
-</p>
-</div>
+      </p>
+    </div>
 
-<div class="oracle-divider">✶</div>
+    <div class="oracle-divider">✶</div>
 
-<p class="oracle-note"
-data-ru="Молитвы, представленные в этом разделе, любезно предоставлены Екатериной Серано (@kateserrano_dance, @lilithcode)."
-data-en="The prayers presented in this section are kindly provided by Ekaterina Serano (@kateserrano_dance, @lilithcode).">
-Молитвы, представленные в этом разделе,  
-любезно предоставлены Екатериной Серано  
-(@kateserrano_dance, @lilithcode).
-</p>
+    <p class="oracle-note"
+      data-ru="Молитвы, представленные в этом разделе, любезно предоставлены Екатериной Серано (@kateserrano_dance, @lilithcode)."
+      data-en="The prayers presented in this section are kindly provided by Ekaterina Serano (@kateserrano_dance, @lilithcode).">
+      Молитвы, представленные в этом разделе, любезно предоставлены Екатериной Серано (@kateserrano_dance, @lilithcode).
+    </p>
   `;
 
   setLanguage(document.documentElement.lang);
 }
+
 
 function renderRitualsSection() {
   updatePath(
@@ -886,11 +1036,6 @@ function renderCoreRitualsPage() {
   </li>
 </ul>
 
-    <p
-      data-ru="Позже сюда мы добавим полные тексты, пояснения, инструменты и пошаговое оформление каждого ритуала."
-      data-en="Later we will add full texts, explanations, tools, and step-by-step structure for each ritual here.">
-      Позже сюда мы добавим полные тексты, пояснения, инструменты и пошаговое оформление каждого ритуала.
-    </p>
   `;
 
   bindCoreRitualsEvents();
@@ -1378,7 +1523,7 @@ forming a stable structure of space.">
 «Алтарь», «Сигилы» и «Магические инструменты»." data-en="Detailed descriptions will be given in the sections
 “Altar”, “Sigils”, and “Magical Tools”.">
 Подробное описание будет дано в разделах
-«Алтарь», «Сигилы» и «Магические инструменты».
+«Алтарь», и «Магические инструменты».
 </p>
 
 <div class="oracle-divider">✶</div>
@@ -2396,7 +2541,7 @@ function renderGamalielGatePage() {
 
       <div class="oracle-image-wrap">
         <img
-          src="assets/img/gamaliel_gate.webp"
+          src="assets/img/vrata.webp"
           alt="Gamaliel Gate"
           class="oracle-image" />
       </div>
